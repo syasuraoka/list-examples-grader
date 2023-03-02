@@ -15,10 +15,10 @@ else
 fi
 
 mkdir new
-dest_dir= "//acsnfs4.ucsd.edu/CifsHomes/711/syasuraoka/GitHub/list-examples-grader/student-submission"
+dest_dir="new"
 mkdir -p "$dest_dir"
-cp "${student-submission}"*.java "$dest_dir"
-cp TestListExamples.java "$dest_dir"
+cp ListExamples.java "$dest_dir"
+cp ../TestListExamples.java "$dest_dir"
 javac -cp CPATH "${dest_dir}"/TestListExamples.java > compile_output.txt 2>&1
 
 if [ $? -ne 0 ]
